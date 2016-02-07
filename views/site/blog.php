@@ -10,66 +10,15 @@ use yii\bootstrap\ActiveForm;
 
 <div id="doc3" class="yui-t7">
 
-    <!--header-->
-    <div id="hd">
-        <h1>Header</h1>
-
-        <!--wrapper-->
-        <div class="wrapper">
-
-            <div class="logo">
-                <a href="index.html"><img src="images/logo.png" width="376" height="53" alt="" /></a>
-            </div><!--end logo-->
-
-            <div class="menu">
-                <ul class="sf-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="menu.html">Menu</a>
-                        <ul>
-                            <li><a href="#">Breakfast</a></li>
-                            <li><a href="#">Lunch</a></li>
-                            <li><a href="#">Dinner</a></li>
-                            <li><a href="#">Desert</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Special offers</a></li>
-                    <li><a href="#">Review</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a class="menu-current" href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div><!--end menu-->
-
-        </div><!--end wrapper-->
-
-
-    </div><!--end header-->
-
 
     <!--middle content-->
     <div id="bd">
-
-        <div class="yui-g main-box">
-
-            <div class="top-tagline">
-                <p>Suspendisse dictum suscipit odio. Nulla dui arcu, fermentum quis, mattis quis, ultricies id, justo. Nulla facilisi. Proin tortor sem, vehicula vitae, facilisis vel</p>
-            </div><!--end top tagline -->
-
-            <div class="breadcrumbs">
-                You are here:
-                <a href="index.html" style="color:#561c40; font-weight:bold;">Home</a> &raquo; <a href="blog.html">Blog</a>
-            </div><!--end breadcrumbs-->
-
-        </div><!--end yui-g main-box-->
 
 
         <div class="yui-g main-box">
 
             <div class="content">
 
-                <h1>Blog</h1>
 
                 <div class="post">
                     <h3><a href="post.html">H3 Lorem ipsum dolor sit amet consect</a></h3>
@@ -84,7 +33,7 @@ use yii\bootstrap\ActiveForm;
                     </ul>
 
                     <div class="entry">
-                        <p><img src="assets/post-image.jpg" alt="Name of image" title="Name of image" /></p>
+                        <p><img src="/public/assets/post-image.jpg" alt="Name of image" title="Name of image" /></p>
                         <p>Suspendisse dictum suscipit odio. Nulla dui arcu, fermentum quis, mattis quis, ultricies id, justo. Nulla facilisi. Proin tortor sem, vehicula vitae,<strong> facilisis vel, accumsan a, sapien.</strong> Vivamus convallis rutrum lorem. Praesent massa lectus, vulputate sed. Vestibulum eu, vestibulum eu, dolor. Integer ante.<strong> Donec imperdiet.</strong> Proin ac odio in urna cursus ultricies. Quisque tincidunt lacus in ante.</p>
 
                     </div><!-- end entry -->
@@ -116,7 +65,7 @@ use yii\bootstrap\ActiveForm;
                     </ul>
 
                     <div class="entry">
-                        <p><img src="assets/post-image.jpg" alt="Name of image" title="Name of image" /></p>
+                        <p><img src="/public/assets/post-image.jpg" alt="Name of image" title="Name of image" /></p>
                         <p>Suspendisse dictum suscipit odio. Nulla dui arcu, fermentum quis, mattis quis, ultricies id, justo. Nulla facilisi. Proin tortor sem, vehicula vitae,<strong> facilisis vel, accumsan a, sapien.</strong> Vivamus convallis rutrum lorem. Praesent massa lectus, vulputate sed. Vestibulum eu, vestibulum eu, dolor. Integer ante.<strong> Donec imperdiet.</strong> Proin ac odio in urna cursus ultricies. Quisque tincidunt lacus in ante.</p>
 
                     </div>
@@ -269,7 +218,7 @@ use yii\bootstrap\ActiveForm;
             <div class="about footer-boxs">
                 <h3>About</h3>
                 <p>
-                    <a href="#"><img src="assets/about-image.jpg" alt="About Monmarthe Cafeteria" title="About Us image" width="80" height="80" /></a>
+                    <a href="#"><img src="/public/assets/about-image.jpg" alt="About Monmarthe Cafeteria" title="About Us image" width="80" height="80" /></a>
                     Suspendisse dictu m suscipit odio. Nulla dui arcu, fermentum quis, mattis quis, ultricies. Nulla dui arcu, fermentum. Suspendisse dictu m suscipit odio. Nulla dui arcu, fermentum quis, mattis quis, ultricies id, justo. Nulla facilisi. Proin tortor sem, vehicula vitae, facilisis vel, accumsan a, sapien.
                 </p>
             </div><!--end about footer-boxs-->

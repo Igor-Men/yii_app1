@@ -5,18 +5,7 @@
 <!--middle content-->
 <div id="bd">
 
-    <div class="yui-g main-box">
-
-        <div class="top-tagline">
-            <p>Suspendisse dictum suscipit odio. Nulla dui arcu, fermentum quis, mattis quis, ultricies id, justo. Nulla facilisi. Proin tortor sem, vehicula vitae, facilisis vel</p>
-        </div><!--end top tagline -->
-
-        <div class="breadcrumbs">
-            You are here:
-            <a href="index.html" style="color:#561c40; font-weight:bold;">Home</a> &raquo; <a href="gallery.html">Gallery</a>
-        </div><!--end breadcrumbs-->
-
-    </div><!--end yui-g main-box-->
+    
 
 
     <div class="yui-g main-box">
