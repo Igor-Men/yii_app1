@@ -40,10 +40,10 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            /*'enableStrictParsing' => false,
+            'enableStrictParsing' => false,
             'rules' => [
                 // ...
-            ],*/
+            ],
         ],
         'db' => require(__DIR__ . '/db.php'),
     ],
