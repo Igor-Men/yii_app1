@@ -51,7 +51,7 @@ AppAsset::register($this);
 
             <div class="menu">
                 <ul class="sf-menu">
-                    <li><a class="menu-current" href="index.html">Home</a></li>
+                    <li><a class="menu-current" href="<?= Url::to(['/site/index']) ?>">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="<?= Url::to(['/site/gallary']) ?>">Gallery</a></li>
                     <li><a href="<?= Url::to(['/site/menu']) ?>">Menu</a>
