@@ -46,7 +46,7 @@ AppAsset::register($this);
         <div class="wrapper">
 
             <div class="logo">
-                <a href="index.html"><img src="public/images/logo.png" width="376" height="53" alt="" /></a>
+                <a href="index.html"><img src="/public/images/logo.png" width="376" height="53" alt="" /></a>
             </div><!--end logo-->
 
             <div class="menu">
@@ -135,7 +135,7 @@ AppAsset::register($this);
             <div class="about footer-boxs">
                 <h3>About</h3>
                 <p>
-                    <a href="#"><img src="public/assets/about-image.jpg" alt="About Monmarthe Cafeteria" title="About Us image" width="80" height="80" /></a>
+                    <a href="#"><img src="/public/assets/about-image.jpg" alt="About Monmarthe Cafeteria" title="About Us image" width="80" height="80" /></a>
                     Suspendisse dictu m suscipit odio. Nulla dui arcu, fermentum quis, mattis quis, ultricies. Nulla dui arcu, fermentum. Suspendisse dictu m suscipit odio. Nulla dui arcu, fermentum quis, mattis quis, ultricies id, justo. Nulla facilisi. Proin tortor sem, vehicula vitae, facilisis vel, accumsan a, sapien.
                 </p>
             </div><!--end about footer-boxs-->

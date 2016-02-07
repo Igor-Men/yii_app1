@@ -39,7 +39,7 @@
                     <div class="menu-item-content">
 
                         <div class="menu-image">
-                            <a class="lightbox" href="assets/post-image.jpg"><img src="assets/menu-item-image.jpg" width="298" height="138" alt="Menu item" /></a>
+                            <a class="lightbox" href="assets/post-image.jpg"><img src="/public/assets/menu-item-image.jpg" width="298" height="138" alt="Menu item" /></a>
                             <p>Image No.1</p>
                             <a href="assets/post-image.jpg" class="zoom-images lightbox">zoom <span>[+]</span></a>
                         </div><!--end menu-image-->
@@ -61,7 +61,7 @@
                     <div class="menu-item-content">
 
                         <div class="menu-image">
-                            <a class="lightbox" href="assets/post-image.jpg"><img src="assets/menu-item-image.jpg" width="298" height="138" alt="Menu item" /></a>
+                            <a class="lightbox" href="assets/post-image.jpg"><img src="/public/assets/menu-item-image.jpg" width="298" height="138" alt="Menu item" /></a>
                             <p>Image No.2</p>
                             <a href="assets/post-image.jpg" class="zoom-images lightbox">zoom <span>[+]</span></a>
                         </div><!--end menu-image-->
@@ -83,7 +83,7 @@
                     <div class="menu-item-content">
 
                         <div class="menu-image">
-                            <a class="lightbox" href="assets/post-image.jpg"><img src="assets/menu-item-image.jpg" width="298" height="138" alt="Menu item" /></a>
+                            <a class="lightbox" href="assets/post-image.jpg"><img src="/public/assets/menu-item-image.jpg" width="298" height="138" alt="Menu item" /></a>
                             <p>Image No.3</p>
                             <a href="assets/post-image.jpg" class="zoom-images lightbox">zoom <span>[+]</span></a>
                         </div><!--end menu-image-->
@@ -127,7 +127,7 @@
                 <div class="book-table-sidebar">
                     <h3>Book a Table</h3>
                     <p>Suspendisse dictum suscipit dictum suscipit.</p>
-                    <a href="book-table.html"><img src="images/book-now-sidebar.jpg" width="137" height="38" alt="Book Now!" /></a>
+                    <a href="book-table.html"><img src="/public/images/book-now-sidebar.jpg" width="137" height="38" alt="Book Now!" /></a>
                 </div><!--end book-table-sidebar-->
             </div>
 
@@ -145,7 +145,7 @@
 
             <div class="sidebar-item">
                 <ul class="download">
-                    <li><img src="images/icon-pdf.png" alt="Download a PDF" title="Image download icon" width="53" height="65" /></li>
+                    <li><img src="/public/images/icon-pdf.png" alt="Download a PDF" title="Image download icon" width="53" height="65" /></li>
                     <li><p>Download a <strong>PDF</strong> version of our menu from <a href="#">here</a>.</p></li>
                 </ul><!-- end download-->
             </div>

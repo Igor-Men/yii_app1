@@ -413,7 +413,7 @@ body {
 		/*---------------- TOP TAGLINE*/
 		.top-tagline{
 			position:relative;
-			background:url("images/tagline-bg.png") no-repeat center top;
+			background:url("/public/images/tagline-bg.png") no-repeat center top;
 			height:52px;
 			padding:30px 40px;
 			top:-50px;
@@ -455,7 +455,7 @@ body {
 			padding-right:20px;
 		}
 		.content h1{
-			background:url("images/horizontal-dots.png") repeat-x left bottom;
+			background:url("/public/images/horizontal-dots.png") repeat-x left bottom;
 			font:normal 25px/40px Georgia, "Times New Roman", Times, serif;
 			color: #42032c;
 		}
@@ -513,7 +513,7 @@ textarea{
 	padding-left:5px;
 }
 .book-table-form input.submit{
-	background:url("images/menu-hover.png") no-repeat scroll left top transparent;
+	background:url("/public/images/menu-hover.png") no-repeat scroll left top transparent;
 	border:medium none;
 	cursor:pointer;
 	display:block;
@@ -526,7 +526,7 @@ textarea{
 	clear:left;
 }
 .book-table-form input.reset{
-	background:url("images/underline.png") no-repeat scroll left 27px transparent;
+	background:url("/public/images/underline.png") no-repeat scroll left 27px transparent;
 	border:medium none;
 	color:#42032c;
 	cursor:pointer;
@@ -543,7 +543,7 @@ textarea{
 
 /*---------------- MENU PAGE*/
 .menu-item{
-	background:url("images/horizontal-dots.png") repeat-x scroll left bottom transparent;
+	background:url("/public/images/horizontal-dots.png") repeat-x scroll left bottom transparent;
 	padding: 10px 0;
 	float: left;
 	display: inline;
@@ -613,15 +613,15 @@ textarea{
 	font:italic 16px Georgia, "Times New Roman", Times, serif;
 	color:#ab245e;
 	display:block;
-	background:url("images/pagination-link.png") no-repeat left top;
+	background:url("/public/images/pagination-link.png") no-repeat left top;
 	padding:10px 15px;
 }
 .pagination a:hover{
-	background:url("images/pagination-current.png") no-repeat left top;
+	background:url("/public/images/pagination-current.png") no-repeat left top;
 	color:#fff;
 }	
 .pagination a.previous{
-	background:url("images/previus-button.png") no-repeat left top;
+	background:url("/public/images/previus-button.png") no-repeat left top;
 	padding-left:37px;
 	width:70px;
 	font-size:18px;
@@ -630,11 +630,11 @@ textarea{
 	color:#42032c;
 }
 .pagination .current{
-	background:url("images/pagination-current.png") no-repeat left top;
+	background:url("/public/images/pagination-current.png") no-repeat left top;
 	color:#fff;
 }
 .pagination a.next{
-	background:url("images/next-button.png") no-repeat left top;
+	background:url("/public/images/next-button.png") no-repeat left top;
 	padding-right:55px;
 	width:52px;
 	font-size:18px;
@@ -645,7 +645,7 @@ textarea{
 
 /*---------------- GALLERY PAGE*/
 .page-one{
-	background:url("images/gallery-dot-bg.png") repeat-y center 10px;
+	background:url("/public/images/gallery-dot-bg.png") repeat-y center 10px;
 	overflow:hidden;
 }
 .content-one{
@@ -655,7 +655,7 @@ textarea{
 	width: 100%;
 	}
 .content-one h1{
-	background:url("images/horizontal-dots.png") repeat-x left bottom;
+	background:url("/public/images/horizontal-dots.png") repeat-x left bottom;
 	font:normal 25px/40px Georgia, "Times New Roman", Times, serif;
 	color: #42032c;
 }
@@ -664,7 +664,7 @@ textarea{
 	display: inline;
 	margin:40px 18px 0 0;
 	width: 299px;
-	background:url("images/menu-image-bg.png") no-repeat scroll center top transparent;
+	background:url("/public/images/menu-image-bg.png") no-repeat scroll center top transparent;
 	height:175px;
 	padding:4px;
 	position:relative;
@@ -685,7 +685,7 @@ textarea{
 
 /*---------------- POST*/
 .post{
-	background:url("images/vertical-dots.png") repeat-y 70px top;
+	background:url("/public/images/vertical-dots.png") repeat-y 70px top;
 	padding:5px 0 10px;
 	margin: 20px 0;
 	position:relative;
@@ -709,7 +709,7 @@ textarea{
 	text-decoration:underline;
 }
 .cloud{
-	background:url("images/comments-cloud.png") no-repeat left top;
+	background:url("/public/images/comments-cloud.png") no-repeat left top;
 	width:73px;
 	height:82px;
 	position:absolute;
@@ -725,7 +725,7 @@ textarea{
 	color: #5b2447;
 }
 .post-calendar{
-	background:url("images/post-calendar-bg.png") no-repeat scroll left top transparent;
+	background:url("/public/images/post-calendar-bg.png") no-repeat scroll left top transparent;
 	height:77px;
 	left:0px;
 	position:absolute;
@@ -743,7 +743,7 @@ textarea{
 	font:bold 30px Georgia,"Times New Roman",Times,serif;
 }
 .post-bottom{
-	background:url("images/horizontal-dots.png") repeat-x left top;
+	background:url("/public/images/horizontal-dots.png") repeat-x left top;
 	font:normal 13px/22px Georgia, "Times New Roman", Times, serif;
 	color: #42032c;
 	padding-left:100px;
@@ -793,7 +793,7 @@ textarea{
 	padding-bottom:12px;
 }
 .entry img{
-	background:url("images/post-image-bg.png") no-repeat left top;
+	background:url("/public/images/post-image-bg.png") no-repeat left top;
 	height:258px;
 	padding:4px;
 	width:536px;
@@ -812,7 +812,7 @@ textarea{
 	padding:10px 0 20px 30px;
 }
 .entry ul li{
-	background:url("images/bullet.png") no-repeat left center;
+	background:url("/public/images/bullet.png") no-repeat left center;
 	font:normal 13px/18px Georgia, "Times New Roman", Times, serif;
 	color: #ab245e;
 	padding-left:20px;
@@ -886,25 +886,25 @@ textarea{
 
 		/*---------------- TWITTER ICON*/
 		.twitter{
-			background:url("images/twitter.png") no-repeat left top;
+			background:url("/public/images/twitter.png") no-repeat left top;
 			width:35px;
 			height:70px;
 		}
 		a.twitter:hover{
-			background:url("images/twitter-hover.png") no-repeat left top;
+			background:url("/public/images/twitter-hover.png") no-repeat left top;
 			width:35px;
 			height:70px;
 		}
 		
 		/*---------------- FACEBOOK ICON*/
 		.facebook{
-			background:url("images/facebook.png") no-repeat left top;
+			background:url("/public/images/facebook.png") no-repeat left top;
 			width:44px;
 			height:44px;
 			margin-top:10px;
 		}
 		a.facebook:hover{
-			background:url("images/facebook-hover.png") no-repeat left top;
+			background:url("/public/images/facebook-hover.png") no-repeat left top;
 			width:44px;
 			height:44px;
 			margin-top:10px;
@@ -912,13 +912,13 @@ textarea{
 		
 		/*---------------- LINKEDIN ICON*/
 		.linkedin{
-			background:url("images/linkedin.png") no-repeat left top;
+			background:url("/public/images/linkedin.png") no-repeat left top;
 			width:44px;
 			height:44px;
 			margin-top:10px;
 		}
 		a.linkedin:hover{
-			background:url("images/linkedin-hover.png") no-repeat left top;
+			background:url("/public/images/linkedin-hover.png") no-repeat left top;
 			width:44px;
 			height:44px;
 			margin-top:10px;
@@ -926,13 +926,13 @@ textarea{
 		
 		/*---------------- RSS ICON*/
 		.rss{
-			background:url("images/rss.png") no-repeat left top;
+			background:url("/public/images/rss.png") no-repeat left top;
 			width:44px;
 			height:44px;
 			margin-top:10px;
 		}
 		a.rss:hover{
-			background:url("images/rss-hover.png") no-repeat left top;
+			background:url("/public/images/rss-hover.png") no-repeat left top;
 			width:44px;
 			height:44px;
 			margin-top:10px;
@@ -942,7 +942,7 @@ textarea{
 
 .recent-posts{}
 .recent-posts li{
-	background:url("images/details-arrow.png") no-repeat scroll left center;
+	background:url("/public/images/details-arrow.png") no-repeat scroll left center;
 	padding-left:20px;
 	border-bottom:1px dotted #561C40;
 }
@@ -957,7 +957,7 @@ textarea{
 /*---------------- ARCHIVES*/
 .archives{}
 .archives li{
-	background:url("images/details-arrow.png") no-repeat scroll left center;
+	background:url("/public/images/details-arrow.png") no-repeat scroll left center;
 	padding-left:20px;
 }
 .archives a{
@@ -971,7 +971,7 @@ textarea{
 /*---------------- CATEGORIES*/
 .categories{}
 .categories li{
-	background:url("images/details-arrow.png") no-repeat scroll left center;
+	background:url("/public/images/details-arrow.png") no-repeat scroll left center;
 	padding-left:20px;
 }
 .categories a{
@@ -1009,7 +1009,7 @@ ul.events-content a.events-title{
 	text-decoration:underline;
 }
 ul.events-calendar{
-	background:url("images/events-calendar-bg.png") no-repeat scroll left top transparent;
+	background:url("/public/images/events-calendar-bg.png") no-repeat scroll left top transparent;
 	height:42px;
 	position:relative;
 	float:left;
@@ -1061,7 +1061,7 @@ ul.events-calendar li.day{
 	font:13px Georgia,"Times New Roman",Times,serif;
 }
 .menu-categories li{
-	background:url("images/details-arrow.png") no-repeat scroll right center transparent;
+	background:url("/public/images/details-arrow.png") no-repeat scroll right center transparent;
 	list-style:decimal;
 	margin-left:20px;
 	border-bottom:1px dotted #9b7083;
@@ -1129,7 +1129,7 @@ ul.events-calendar li.day{
 	clear:left;
 }
 #comments h3{
-	background:url("images/horizontal-dots.png") repeat-x scroll left bottom;
+	background:url("/public/images/horizontal-dots.png") repeat-x scroll left bottom;
 	color:#AB245E;
 	font:italic 20px/30px Georgia,"Times New Roman",Times,serif;
 }
@@ -1153,7 +1153,7 @@ ul.events-calendar li.day{
 	padding:0;
 }
 #comments ul.comment-avatar img{
-	background:url("images/avatar-bg.png") no-repeat scroll left top;
+	background:url("/public/images/avatar-bg.png") no-repeat scroll left top;
 	height:70px;
 	padding:4px;
 	width:70px;
@@ -1169,7 +1169,7 @@ ul.events-calendar li.day{
 	display:block;
 }
 #comments ul.comment-content{
-	background:url("images/comment-border-left-right.jpg") repeat-y scroll left top;
+	background:url("/public/images/comment-border-left-right.jpg") repeat-y scroll left top;
 	width:540px;
 	position:relative;
 	float:left;
@@ -1177,7 +1177,7 @@ ul.events-calendar li.day{
 }
 #comments ul.comment-content li{}
 #comments li.comment-content-top{
-	background:url("images/comment-border-top.jpg") repeat-x scroll left top;
+	background:url("/public/images/comment-border-top.jpg") repeat-x scroll left top;
 	height:4px;
 	width:533px;	
 	margin:0;
@@ -1188,7 +1188,7 @@ ul.events-calendar li.day{
 	left:0;
 }
 #comments li.comment-content-bottom{
-	background:url("images/comment-border-bottom.jpg") repeat-x scroll left top;
+	background:url("/public/images/comment-border-bottom.jpg") repeat-x scroll left top;
 	height:4px;
 	width:533px;
 	margin:0;
@@ -1219,7 +1219,7 @@ ul.events-calendar li.day{
 }
 #comments li.replay a:hover{ text-decoration:underline;}
 #comments li.arrow{
-	background:url("images/comment-arrow.jpg") no-repeat scroll left top;
+	background:url("/public/images/comment-arrow.jpg") no-repeat scroll left top;
 	width:33px;
 	height:26px;
 	position:absolute;
@@ -1243,7 +1243,7 @@ ul.events-calendar li.day{
 	border:0;
 }
 #comments ol li ol li ul.comment-content{
-	background:url("images/comment-replay-border-left-right.jpg") repeat-y scroll left top;
+	background:url("/public/images/comment-replay-border-left-right.jpg") repeat-y scroll left top;
 	width:490px;
 	position:relative;
 	float:left;
@@ -1252,7 +1252,7 @@ ul.events-calendar li.day{
 	margin:0;
 }
 #comments ol li ol li.comment-content-top{
-	background:url("images/comment-border-top.jpg") repeat-x scroll left top;
+	background:url("/public/images/comment-border-top.jpg") repeat-x scroll left top;
 	height:4px;
 	width:490px;	
 	margin:0;
@@ -1263,7 +1263,7 @@ ul.events-calendar li.day{
 	left:0;
 }
 #comments ol ol li.comment-content-bottom{
-	background:url("images/comment-border-bottom.jpg") repeat-x scroll left top;
+	background:url("/public/images/comment-border-bottom.jpg") repeat-x scroll left top;
 	height:4px;
 	width:490px;
 	margin:0;
@@ -1344,7 +1344,7 @@ ul.events-calendar li.day{
 			padding-bottom:10px;
 		}
 		.review p {
-			background:url("images/quote.jpg") no-repeat left top;
+			background:url("/public/images/quote.jpg") no-repeat left top;
 			font: italic 12px/18px Georgia, "Times New Roman", Times, serif;
 			color: #f2dcbb;
 			padding:0 15px;
@@ -1387,7 +1387,7 @@ ul.events-calendar li.day{
 			height:50px;
 		}
 		.contact-us input.submit {
-			background:url("images/submit.png") no-repeat top left;
+			background:url("/public/images/submit.png") no-repeat top left;
 			cursor:pointer;
 			display:block;
 			float:left;
@@ -1398,7 +1398,7 @@ ul.events-calendar li.day{
 			border:none;
 		}
 		.contact-us input.reset {
-			background:url("images/reset.png") no-repeat top left;
+			background:url("/public/images/reset.png") no-repeat top left;
 			cursor:pointer;
 			display:block;
 			float:left;
@@ -1424,7 +1424,7 @@ ul.events-calendar li.day{
 			display:inline;
 		}
 		.about img {
-			background:url("images/about-image-bg.png") no-repeat top left;
+			background:url("/public/images/about-image-bg.png") no-repeat top left;
 			padding:4px;
 		}
 		.about p {

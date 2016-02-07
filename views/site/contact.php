@@ -83,7 +83,7 @@ $this->title = 'Contact';
                 <div class="book-table-sidebar">
                     <h3>Book a Table</h3>
                     <p>Suspendisse dictum suscipit dictum suscipit.</p>
-                    <a href="book-table.html"><img src="images/book-now-sidebar.jpg" width="137" height="38" alt="Book Now!" /></a>
+                    <a href="book-table.html"><img src="/public/images/book-now-sidebar.jpg" width="137" height="38" alt="Book Now!" /></a>
                 </div><!--end book-table-sidebar-->
             </div>
 
