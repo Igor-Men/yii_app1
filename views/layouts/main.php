@@ -8,6 +8,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -52,8 +53,8 @@ AppAsset::register($this);
                 <ul class="sf-menu">
                     <li><a class="menu-current" href="index.html">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="menu.html">Menu</a>
+                    <li><a href="<?= Url::to(['/site/gallary']) ?>">Gallery</a></li>
+                    <li><a href="<?= Url::to(['/site/menu']) ?>">Menu</a>
                         <ul>
                             <li><a href="#">Breakfast</a></li>
                             <li><a href="#">Lunch</a></li>
@@ -65,7 +66,8 @@ AppAsset::register($this);
                     <li><a href="#">Review</a></li>
                     <li><a href="#">Events</a></li>
                     <li><a href="<?= \yii\helpers\Url::to(['site/blog']); ?>">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="<?= Url::to(['/site/contact']) ?>">Contact</a></li>
+
                 </ul>
             </div><!--end menu-->
 
