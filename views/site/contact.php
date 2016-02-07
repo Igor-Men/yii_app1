@@ -9,60 +9,115 @@ use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
 $this->title = 'Contact';
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-contact">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
-        <div class="alert alert-success">
-            Thank you for contacting us. We will respond to you as soon as possible.
-        </div>
+<!--middle content-->
+<div id="bd">
 
-        <p>
-            Note that if you turn on the Yii debugger, you should be able
-            to view the mail message on the mail panel of the debugger.
-            <?php if (Yii::$app->mailer->useFileTransport): ?>
-                Because the application is in development mode, the email is not sent but saved as
-                a file under <code><?= Yii::getAlias(Yii::$app->mailer->fileTransportPath) ?></code>.
-                Please configure the <code>useFileTransport</code> property of the <code>mail</code>
-                application component to be false to enable email sending.
-            <?php endif; ?>
-        </p>
+    <div class="yui-g main-box">
 
-    <?php else: ?>
+        <div class="top-tagline">
+            <p>Suspendisse dictum suscipit odio. Nulla dui arcu, fermentum quis, mattis quis, ultricies id, justo. Nulla facilisi. Proin tortor sem, vehicula vitae, facilisis vel</p>
+        </div><!--end top tagline -->
 
-        <p>
-            If you have business inquiries or other questions, please fill out the following form to contact us.
-            Thank you.
-        </p>
+        <div class="breadcrumbs">
+            You are here:
+            <a href="index.html" style="color:#561c40; font-weight:bold;">Home</a> &raquo; <a href="contact.html">Contact</a>
+        </div><!--end breadcrumbs-->
 
-        <div class="row">
-            <div class="col-lg-5">
+    </div><!--end yui-g main-box-->
 
-                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
-                    <?= $form->field($model, 'name') ?>
+    <div class="yui-g main-box">
 
-                    <?= $form->field($model, 'email') ?>
+        <div class="content">
 
-                    <?= $form->field($model, 'subject') ?>
+            <h1>Contact</h1>
 
-                    <?= $form->field($model, 'body')->textArea(['rows' => 6]) ?>
+            <div class="page">
+                <p>Proin tortor sem, vehicula vitae, facilisis vel, accumsan a, sapien. Vivamus convallis rutrum lorem. Praesent massa lectus, vulputate sed, vestibulum eu, vestibulum eu, dolor. Integer ante. Donec imperdiet. Proin ac odio in urna cursus ultricies. Quisque tincidunt lacus in ante. </p>
 
-                    <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                        'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                    ]) ?>
+                <form action="php/mail.php" method="post" enctype="multipart/form-data">
+                    <div class="book-table-form">
+                        <label>*Your name:</label>
+                        <input class="input-field" name="name" id="name1" />
 
-                    <div class="form-group">
-                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                        <label>*Your Email:</label>
+                        <input class="input-field" name="email" id="email1" />
+
+                        <label>Subject:</label>
+                        <input class="input-field" name="subject" id="subject" />
+
+                        <label>Your message:</label>
+                        <textarea class="textarea-field" name="message" id="message1" cols="80" rows="5"></textarea>
+
+                        <br/>
+                        <input type="submit" name="" class="submit" value="Send Email" />
+                        <input type="reset" name="" class="reset" value="Clear form" />
                     </div>
+                </form>
 
-                <?php ActiveForm::end(); ?>
+                <div class="google-map">
+                    <h3>Find us on Google Maps</h3>
+                    <div class="google-map-background">
+                        <div id="google-map-location"></div>
+                    </div>
+                </div><!--end google-map-->
 
+            </div><!-- end page -->
+        </div><!-- end content -->
+
+        <div class="sidebar">
+            <div class="sidebar-item">
+                <ul class="social-icons">
+                    <li><a class="twitter" href="#"></a></li>
+                    <li><a class="facebook" href="#"></a></li>
+                    <li><a class="linkedin" href="#"></a></li>
+                    <li><a class="rss" href="#"></a></li>
+                </ul><!-- end social-icons-->
             </div>
-        </div>
 
-    <?php endif; ?>
-</div>
+            <div class="sidebar-item">
+                <div class="book-table-sidebar">
+                    <h3>Book a Table</h3>
+                    <p>Suspendisse dictum suscipit dictum suscipit.</p>
+                    <a href="book-table.html"><img src="images/book-now-sidebar.jpg" width="137" height="38" alt="Book Now!" /></a>
+                </div><!--end book-table-sidebar-->
+            </div>
+
+            <div class="sidebar-item">
+                <h3>Address</h3>
+                <ul class="address">
+                    <li>
+                        <span>Phone:</span>
+                        <p>+123.456.789</p>
+                        <span>Fax:</span>
+                        <p>+123.456.789</p>
+                        <span>Email:</span>
+                        <p><a href="mailto:office@something.com">office@something.com</a></p>
+                    </li>
+                </ul><!--end address-->
+            </div>
+
+            <div class="sidebar-item">
+                <div class="cafeteria-hours">
+                    <h3>Cafeteria Hours</h3>
+                    <ul class="cafeteria-hours-content">
+                        <li><h3 class="shedule-title">Breakfast</h3></li>
+                        <li><label>Monday - Friday</label><span>11:00 am - 03:00 pm</span></li>
+                        <li><label>Monday - Friday</label><span>11:00 am - 03:00 pm</span></li>
+                    </ul>
+                    <ul class="cafeteria-hours-content">
+                        <li><h3 class="shedule-title">Breakfast</h3></li>
+                        <li><label>Monday - Friday</label><span>11:00 am - 03:00 pm</span></li>
+                        <li><label>Monday - Friday</label><span>11:00 am - 03:00 pm</span></li>
+                    </ul>
+                </div><!-- end cafeteria-hours-->
+            </div>
+
+        </div><!-- end sidebar -->
+    </div><!-- end yui-g main-box -->
+
+</div><!-- end bd -->

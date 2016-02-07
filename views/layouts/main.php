@@ -8,6 +8,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -65,7 +66,7 @@ AppAsset::register($this);
                     <li><a href="#">Review</a></li>
                     <li><a href="#">Events</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="<?= Url::to(['/site/contact']) ?>">Contact</a></li>
                 </ul>
             </div><!--end menu-->
 
