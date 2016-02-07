@@ -64,7 +64,7 @@ AppAsset::register($this);
                     <li><a href="#">Special offers</a></li>
                     <li><a href="#">Review</a></li>
                     <li><a href="#">Events</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="<?= \yii\helpers\Url::to(['site/blog']); ?>">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div><!--end menu-->
