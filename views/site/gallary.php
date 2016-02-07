@@ -5,7 +5,7 @@
 <!--middle content-->
 <div id="bd">
 
-    
+
 
 
     <div class="yui-g main-box">
