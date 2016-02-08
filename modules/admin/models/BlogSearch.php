@@ -5,12 +5,12 @@ namespace app\modules\admin\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\modules\admin\models\Banners;
+use app\modules\admin\models\Blog;
 
 /**
- * BannerSearch represents the model behind the search form about `app\modules\admin\models\Banners`.
+ * BlogSearch represents the model behind the search form about `app\modules\admin\models\Blog`.
  */
-class BannerSearch extends Banners
+class BlogSearch extends Blog
 {
     /**
      * @inheritdoc
@@ -19,7 +19,7 @@ class BannerSearch extends Banners
     {
         return [
             [['id'], 'integer'],
-            [['title', 'content', 'image'], 'safe'],
+            [['title', 'content', 'image', 'tags'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class BannerSearch extends Banners
      */
     public function search($params)
     {
-        $query = Banners::find();
+        $query = Blog::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -61,7 +61,8 @@ class BannerSearch extends Banners
 
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'content', $this->content])
-            ->andFilterWhere(['like', 'image', $this->image]);
+            ->andFilterWhere(['like', 'image', $this->image])
+            ->andFilterWhere(['like', 'tags', $this->tags]);
 
         return $dataProvider;
     }

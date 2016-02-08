@@ -4,20 +4,20 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\modules\admin\models\BannerSearch */
+/* @var $searchModel app\modules\admin\models\BlogSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Banners';
+$this->title = 'Blogs';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <br>
-<div class="banners-index">
+<div class="blog-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Banners', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Blog', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -30,6 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'content:ntext',
             'image',
+            'tags',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

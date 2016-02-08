@@ -1,17 +1,9 @@
 <?php
 use yii\helpers\Html;
 use yii\bootstrap\BootstrapAsset;
-use yii\bootstrap\BaseHtml;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use app\assets\AppAssetAdmin;
+use app\modules\admin\assets\AppAssetAdmin;
 use yii\helpers\Url;
 
-/* @var $this yii\web\View */
-/* @var $content string */
-
-//AppAsset::register($this);
 AppAssetAdmin::register($this);
 BootstrapAsset::register($this);
 ?>
@@ -21,13 +13,11 @@ BootstrapAsset::register($this);
     <!DOCTYPE html>
     <html lang="en">
     <head>
-        <meta charset="UTF-8"/>
         <?= Html::csrfMetaTags() ?>
         <title>Admin panel</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-        <meta http-equiv="Pragma" content="no-cache" />
-
+        <?= $this->registerMetaTag([ 'charset'=>'utf-8']);?>
+        <?= $this->registerMetaTag(['http-equiv'=>'content-type', 'content' => 'text/htm', 'charset'=>'utf-8']);?>
+        <?= $this->registerMetaTag(['http-equiv'=>'Pragma', 'content' => 'no-cache',]);?>
         <?php $this->head() ?>
     </head>
     <body>
@@ -45,8 +35,8 @@ BootstrapAsset::register($this);
             <!-- navigation -->
             <div class="gt-nav">
                 <ul>
-                    <li><a href="<?= Url::to(['/admin/index']) ?>">Home</a></li>
-                    <li><a href="<?= Url::to(['/admin/blog']) ?>">Blog</a></li>
+                    <li><a href="<?= Url::to(['/admin/banner/index']) ?>">Banner</a></li>
+                    <li><a href="<?= Url::to(['/admin/blog/index']) ?>">Blog</a></li>
                 </ul>
             </div>
             <!-- / navigation -->

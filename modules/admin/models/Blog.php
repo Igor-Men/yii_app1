@@ -5,21 +5,22 @@ namespace app\modules\admin\models;
 use Yii;
 
 /**
- * This is the model class for table "banners".
+ * This is the model class for table "blog".
  *
  * @property integer $id
  * @property string $title
  * @property string $content
  * @property string $image
+ * @property string $tags
  */
-class Banners extends \yii\db\ActiveRecord
+class Blog extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'banners';
+        return 'blog';
     }
 
     /**
@@ -28,9 +29,9 @@ class Banners extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'image'], 'required'],
+            [['title', 'image', 'tags'], 'required'],
             [['content'], 'string'],
-            [['title', 'image'], 'string', 'max' => 255]
+            [['title', 'image', 'tags'], 'string', 'max' => 255]
         ];
     }
 
@@ -44,15 +45,16 @@ class Banners extends \yii\db\ActiveRecord
             'title' => 'Title',
             'content' => 'Content',
             'image' => 'Image',
+            'tags' => 'Tags',
         ];
     }
 
     /**
      * @inheritdoc
-     * @return BannersQuery the active query used by this AR class.
+     * @return BlogQuery the active query used by this AR class.
      */
     public static function find()
     {
-        return new BannersQuery(get_called_class());
+        return new BlogQuery(get_called_class());
     }
 }

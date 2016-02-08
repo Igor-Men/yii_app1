@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\Banners */
+/* @var $model app\modules\admin\models\Blog */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="banners-form">
+<div class="blog-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -17,6 +17,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'tags')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

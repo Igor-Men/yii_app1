@@ -6,11 +6,13 @@
  * Time: 21:38
  */
 
-namespace app\assets;
 
+namespace app\modules\admin\assets;
 use yii\web\AssetBundle;
 
+
 class AppAssetAdmin extends AssetBundle {
+
 
     public $basePath = '@webroot';
     public $baseUrl = '@web';

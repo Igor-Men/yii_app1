@@ -3,11 +3,11 @@
 namespace app\modules\admin\models;
 
 /**
- * This is the ActiveQuery class for [[Banners]].
+ * This is the ActiveQuery class for [[Blog]].
  *
- * @see Banners
+ * @see Blog
  */
-class BannersQuery extends \yii\db\ActiveQuery
+class BlogQuery extends \yii\db\ActiveQuery
 {
     /*public function active()
     {
@@ -17,7 +17,7 @@ class BannersQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return Banners[]|array
+     * @return Blog[]|array
      */
     public function all($db = null)
     {
@@ -26,7 +26,7 @@ class BannersQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return Banners|array|null
+     * @return Blog|array|null
      */
     public function one($db = null)
     {

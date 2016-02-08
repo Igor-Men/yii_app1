@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\BannerSearch */
+/* @var $model app\modules\admin\models\BlogSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="banners-search">
+<div class="blog-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
@@ -22,6 +22,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'content') ?>
 
     <?= $form->field($model, 'image') ?>
+
+    <?= $form->field($model, 'tags') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
