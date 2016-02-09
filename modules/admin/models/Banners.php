@@ -3,6 +3,9 @@
 namespace app\modules\admin\models;
 
 use Yii;
+use yii\web\UploadedFile;
+
+
 
 /**
  * This is the model class for table "banners".
@@ -14,6 +17,8 @@ use Yii;
  */
 class Banners extends \yii\db\ActiveRecord
 {
+    public $file;
+
     /**
      * @inheritdoc
      */
@@ -28,9 +33,12 @@ class Banners extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'image'], 'required'],
+            [['title'], 'required'],
             [['content'], 'string'],
-            [['title', 'image'], 'string', 'max' => 255]
+            [['title', 'image'], 'string', 'max' => 255],
+//            [['title'], 'string', 'max' => 255],
+//            [['image'], 'file', 'extensions' => 'png, jpg'],
+            [['file'], 'file']
         ];
     }
 
@@ -44,6 +52,7 @@ class Banners extends \yii\db\ActiveRecord
             'title' => 'Title',
             'content' => 'Content',
             'image' => 'Image',
+            'file' => 'File Image'
         ];
     }
 

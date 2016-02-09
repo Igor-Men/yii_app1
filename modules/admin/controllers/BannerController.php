@@ -9,14 +9,16 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+use app\models\UploadForm;
+use yii\web\UploadedFile;
+use yii\imagine\Image;
+
 /**
  * BannerController implements the CRUD actions for Banners model.
  */
 class BannerController extends Controller
 {
-
     public $layout = 'admin_index';
-
 
     public function behaviors()
     {
@@ -67,6 +69,12 @@ class BannerController extends Controller
         $model = new Banners();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+            $model->file = UploadedFile::getInstance($model, 'file');
+            $model->file->saveAs('uploads/'.$model->file->getBaseName().'.'.$model->file->extension);
+            $model->image = 'uploads/'.$model->file->getBaseName().'.'.$model->file->extension;
+            $model->save();
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -122,4 +130,15 @@ class BannerController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+    public function createDirectory($path) {
+        //$filename = "/folder/{$dirname}/";
+        if (file_exists($path)) {
+            //echo "The directory {$path} exists";
+        } else {
+            mkdir($path, 0775, true);
+            //echo "The directory {$path} was successfully created.";
+        }
+    }
+
 }
