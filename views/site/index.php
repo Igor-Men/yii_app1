@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application1';
+
 ?>
 
 <div id="bd">
@@ -20,9 +21,9 @@ $this->title = 'My Yii Application1';
 
                 <!-- root element for the items -->
                 <div class="items">
-                    <div><img src="/public/assets/slide-1.jpg" alt="slide-1" /></div>
-                    <div><img src="/public/assets/slide-2.jpg" alt="slide-2" /></div>
-                    <div><img src="/public/assets/slide-3.jpg" alt="slide-3" /></div>
+                    <?php foreach($arrBanners as $key => $banner):  ?>
+                        <div><img src="<?= $banner['image']?>" alt="<?= $banner['title']?>" /></div>
+                    <?php endforeach;?>
                 </div>
 
             </div><!--end scrollable-->
