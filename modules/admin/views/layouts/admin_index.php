@@ -37,6 +37,7 @@ BootstrapAsset::register($this);
                 <ul>
                     <li><a href="<?= Url::to(['/admin/banner/index']) ?>">Banner</a></li>
                     <li><a href="<?= Url::to(['/admin/blog/index']) ?>">Blog</a></li>
+                    <li><a href="<?= Url::to(['/admin/contact/index']) ?>">Contact</a></li>
                 </ul>
             </div>
             <!-- / navigation -->
