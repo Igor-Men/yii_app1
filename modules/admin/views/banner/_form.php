@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 
 <div class="banners-form">
 
-    <?php $form = ActiveForm::begin(['id' => 'banner-form', 'options' => ['enctype' => 'multipart/form-data']]); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 

@@ -131,14 +131,4 @@ class BannerController extends Controller
         }
     }
 
-    public function createDirectory($path) {
-        //$filename = "/folder/{$dirname}/";
-        if (file_exists($path)) {
-            //echo "The directory {$path} exists";
-        } else {
-            mkdir($path, 0775, true);
-            //echo "The directory {$path} was successfully created.";
-        }
-    }
-
 }

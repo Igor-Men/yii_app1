@@ -3,6 +3,7 @@
 namespace app\modules\admin\models;
 
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "blog".
@@ -15,6 +16,10 @@ use Yii;
  */
 class Blog extends \yii\db\ActiveRecord
 {
+
+    public $file;
+
+
     /**
      * @inheritdoc
      */
@@ -29,9 +34,10 @@ class Blog extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'image', 'tags'], 'required'],
+            [['title'], 'required'],
             [['content'], 'string'],
-            [['title', 'image', 'tags'], 'string', 'max' => 255]
+            [['title', 'image', 'tags'], 'string', 'max' => 255],
+            [['file'], 'file']
         ];
     }
 
@@ -46,6 +52,7 @@ class Blog extends \yii\db\ActiveRecord
             'content' => 'Content',
             'image' => 'Image',
             'tags' => 'Tags',
+            'file' => 'File Image'
         ];
     }
 
@@ -56,5 +63,22 @@ class Blog extends \yii\db\ActiveRecord
     public static function find()
     {
         return new BlogQuery(get_called_class());
+    }
+
+
+
+    public function upload() {
+
+        if ($this->validate()) {
+            $this->file = UploadedFile::getInstance($this, 'file');
+            $this->file->saveAs('uploads/'.$this->file->getBaseName().'.'.$this->file->extension);
+            $this->image = 'uploads/'.$this->file->getBaseName().'.'.$this->file->extension;
+            $this->save();
+            return true;
+        } else {
+            return false;
+        }
+
+
     }
 }
