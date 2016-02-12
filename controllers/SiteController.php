@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\modules\admin\models\Blog;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -9,6 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\modules\admin\models\Banners;
+use yii\data\Pagination;
 
 class SiteController extends Controller
 {
@@ -120,6 +122,21 @@ class SiteController extends Controller
 
     public function actionBlog()
     {
-        return $this->render('blog');
+        $query = Blog::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 2,
+            'totalCount' => $query->count(),
+        ]);
+
+        $blogs = $query->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+
+
+        return $this->render('blog',[
+            'blogs' => $blogs,
+            'pagination' => $pagination
+        ]);
     }
 }

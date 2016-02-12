@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\models\ContactForm */
+/* @var $blogs*/
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
@@ -19,22 +20,19 @@ use yii\bootstrap\ActiveForm;
 
             <div class="content">
 
-
+                <?php foreach ($blogs as $blog): ?>
                 <div class="post">
-                    <h3><a href="post.html">H3 Lorem ipsum dolor sit amet consect</a></h3>
+                    <h3><a href="#"><?= $blog->title ?></a></h3>
                     <p class="author">Published by: <a href="#">admin</a></p>
-                    <span class="cloud">
-                    	<a href="#">24</a><br />
-                        comments:
-                    </span>
+
                     <ul class="post-calendar">
                         <li>Apr</li>
                         <li class="day">10</li>
                     </ul>
 
                     <div class="entry">
-                        <p><img src="/public/assets/post-image.jpg" alt="Name of image" title="Name of image" /></p>
-                        <p>Suspendisse dictum suscipit odio. Nulla dui arcu, fermentum quis, mattis quis, ultricies id, justo. Nulla facilisi. Proin tortor sem, vehicula vitae,<strong> facilisis vel, accumsan a, sapien.</strong> Vivamus convallis rutrum lorem. Praesent massa lectus, vulputate sed. Vestibulum eu, vestibulum eu, dolor. Integer ante.<strong> Donec imperdiet.</strong> Proin ac odio in urna cursus ultricies. Quisque tincidunt lacus in ante.</p>
+                        <p><?=Html::img($blog->image) ?>"</p>
+                        <p><?=$blog->content?></p>
 
                     </div><!-- end entry -->
 
@@ -52,48 +50,7 @@ use yii\bootstrap\ActiveForm;
 
                 </div><!-- end post -->
 
-                <div class="post">
-                    <h3><a href="post.html">H3 Lorem ipsum dolor sit amet consect</a></h3>
-                    <p class="author">Published by: <a href="#">admin</a></p>
-                    <span class="cloud">
-                    	<a href="#">24</a><br />
-                        comments:
-                    </span>
-                    <ul class="post-calendar">
-                        <li>Apr</li>
-                        <li class="day">10</li>
-                    </ul>
-
-                    <div class="entry">
-                        <p><img src="/public/assets/post-image.jpg" alt="Name of image" title="Name of image" /></p>
-                        <p>Suspendisse dictum suscipit odio. Nulla dui arcu, fermentum quis, mattis quis, ultricies id, justo. Nulla facilisi. Proin tortor sem, vehicula vitae,<strong> facilisis vel, accumsan a, sapien.</strong> Vivamus convallis rutrum lorem. Praesent massa lectus, vulputate sed. Vestibulum eu, vestibulum eu, dolor. Integer ante.<strong> Donec imperdiet.</strong> Proin ac odio in urna cursus ultricies. Quisque tincidunt lacus in ante.</p>
-
-                    </div>
-
-                    <div class="post-bottom">
-                        <span class="post-bottom-categories">Categories:
-                            <a href="#">Blog</a>
-                        </span>
-                        <span class="post-bottom-tags">Tags:
-                            <a href="#">fermentum,</a>
-                            <a href="#">quis,</a>
-                            <a href="#">mattis quis,</a>
-                            <a href="#">ualtricies id</a>
-                        </span>
-                    </div><!-- end post-bottom -->
-
-
-                    <ul class="pagination">
-                        <li><a class="previous" href="#">Previous</a></li>
-                        <li><a class="current" href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a class="next" href="#">Next</a></li>
-                    </ul><!-- end pagination -->
-
-                </div><!-- end post -->
+                <?php endforeach; ?>
 
             </div><!-- end main content -->
 
