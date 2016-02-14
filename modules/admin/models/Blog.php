@@ -96,13 +96,12 @@ class Blog extends \yii\db\ActiveRecord
 
 
     /**
-     *
+     * @return bool
      */
     public function createDate () {
-
         $this->month = substr(date('F'), 0, 3);
         $this->day = date('d');
         $this->save();
-
+        return true;
     }
 }
