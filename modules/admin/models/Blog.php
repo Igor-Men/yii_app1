@@ -75,33 +75,31 @@ class Blog extends \yii\db\ActiveRecord
     /**
      * @return bool
      */
-    public function upload() {
-
+    public function upload()
+    {
         if ($this->validate()) {
-            $this->file = UploadedFile::getInstance($this, 'file');
-            $this->file->saveAs('uploads/'.$this->file->getBaseName().'.'.$this->file->extension);
 
-            Image::getImagine()->open('uploads/'.$this->file->getBaseName().'.'.$this->file->extension)
+            $this->file = UploadedFile::getInstance($this, 'file');
+            $this->file->saveAs('uploads/' . $this->file->getBaseName() . '.' . $this->file->extension);
+
+            Image::getImagine()->open('uploads/' . $this->file->getBaseName() . '.' . $this->file->extension)
                 ->thumbnail(new Box(537, 258))
-                ->save('uploads/blogCrop/'. $this->file->getBaseName(). '.'. $this->file->extension, ['quality' => 90]);
-            @unlink('uploads/'.$this->file->getBaseName().'.'.$this->file->extension);
-            $this->image = 'uploads/blogCrop/'.$this->file->getBaseName().'.'.$this->file->extension;
+                ->save('uploads/blogCrop/' . $this->file->getBaseName() . '.' . $this->file->extension, ['quality' => 90]);
+            @unlink('uploads/' . $this->file->getBaseName() . '.' . $this->file->extension);
+            $this->image = 'uploads/blogCrop/' . $this->file->getBaseName() . '.' . $this->file->extension;
+            $this->createDate();
             $this->save();
             return true;
         } else {
             return false;
         }
-
     }
 
 
-    /**
-     * @return bool
-     */
-    public function createDate () {
+    public function createDate()
+    {
         $this->month = substr(date('F'), 0, 3);
         $this->day = date('d');
         $this->save();
-        return true;
     }
 }
