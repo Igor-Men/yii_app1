@@ -31,7 +31,7 @@ use yii\bootstrap\ActiveForm;
                     </ul>
 
                     <div class="entry">
-                        <p><?=Html::img($blog->image) ?>"</p>
+                        <p><?=Html::img('/'.$blog->image) ?>"</p>
                         <p><?=$blog->content?></p>
 
                     </div><!-- end entry -->
