@@ -12,7 +12,9 @@ class m160208_230552_create_blog_table extends Migration
             'title' => Schema::TYPE_STRING . ' NOT NULL',
             'content' => Schema::TYPE_TEXT,
             'image' => Schema::TYPE_STRING . ' NOT NULL',
-            'tags' =>  Schema::TYPE_STRING . ' NOT NULL'
+            'tags' =>  Schema::TYPE_STRING . ' NOT NULL',
+            'month' =>  Schema::TYPE_STRING . ' NOT NULL',
+            'day' =>  Schema::TYPE_STRING . ' NOT NULL'
         ],'ENGINE=InnoDB CHARSET=utf8');
     }
 

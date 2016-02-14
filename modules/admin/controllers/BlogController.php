@@ -71,6 +71,7 @@ class BlogController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
             if ($model->upload()) {
+                $model->createDate();
                 return $this->redirect(['view', 'id' => $model->id]);
             }
 

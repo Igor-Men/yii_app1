@@ -17,6 +17,8 @@ use Imagine\Image\BoxInterface;
  * @property string $content
  * @property string $image
  * @property string $tags
+ * @property string $month
+ * @property string $day
  */
 class Blog extends \yii\db\ActiveRecord
 {
@@ -70,7 +72,9 @@ class Blog extends \yii\db\ActiveRecord
     }
 
 
-
+    /**
+     * @return bool
+     */
     public function upload() {
 
         if ($this->validate()) {
@@ -88,6 +92,17 @@ class Blog extends \yii\db\ActiveRecord
             return false;
         }
 
+    }
+
+
+    /**
+     *
+     */
+    public function createDate () {
+
+        $this->month = substr(date('F'), 0, 3);
+        $this->day = date('d');
+        $this->save();
 
     }
 }

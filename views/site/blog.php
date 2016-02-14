@@ -20,11 +20,11 @@ use yii\widgets\LinkPager;
                     <h3><a href="#"><?= $blog->title ?></a></h3>
                     <p class="author">Published by: <a href="#">admin</a></p>
                     <ul class="post-calendar">
-                        <li>Apr</li>
-                        <li class="day">10</li>
+                        <li><?=$blog->month ?></li>
+                        <li class="day"><?=$blog->day?></li>
                     </ul>
                     <div class="entry">
-                        <p><?=Html::img('/'.$blog->image) ?>"</p>
+                        <p><?=Html::img('/'.$blog->image) ?></p>
                         <p><?=$blog->content?></p>
 
                     </div><!-- end entry -->
