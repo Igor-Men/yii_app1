@@ -4,6 +4,10 @@ namespace app\modules\admin\models;
 
 use Yii;
 use yii\web\UploadedFile;
+use yii\imagine\Image;
+use Imagine\Gd;
+use Imagine\Image\Box;
+use Imagine\Image\BoxInterface;
 
 /**
  * This is the model class for table "blog".
@@ -72,7 +76,12 @@ class Blog extends \yii\db\ActiveRecord
         if ($this->validate()) {
             $this->file = UploadedFile::getInstance($this, 'file');
             $this->file->saveAs('uploads/'.$this->file->getBaseName().'.'.$this->file->extension);
-            $this->image = 'uploads/'.$this->file->getBaseName().'.'.$this->file->extension;
+
+            Image::getImagine()->open('uploads/'.$this->file->getBaseName().'.'.$this->file->extension)
+                ->thumbnail(new Box(537, 258))
+                ->save('uploads/blogCrop/'. $this->file->getBaseName(). '.'. $this->file->extension, ['quality' => 90]);
+            @unlink('uploads/'.$this->file->getBaseName().'.'.$this->file->extension);
+            $this->image = 'uploads/blogCrop/'.$this->file->getBaseName().'.'.$this->file->extension;
             $this->save();
             return true;
         } else {
