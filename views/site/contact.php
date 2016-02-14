@@ -39,7 +39,28 @@ $this->title = 'Contact';
             <div class="page">
                 <p>Proin tortor sem, vehicula vitae, facilisis vel, accumsan a, sapien. Vivamus convallis rutrum lorem. Praesent massa lectus, vulputate sed, vestibulum eu, vestibulum eu, dolor. Integer ante. Donec imperdiet. Proin ac odio in urna cursus ultricies. Quisque tincidunt lacus in ante. </p>
 
-                <form action="php/mail.php" method="post" enctype="multipart/form-data">
+<!--                <form action="" method="post" enctype="multipart/form-data">-->
+<!--                    <div class="book-table-form">-->
+<!--                        <label>*Your name:</label>-->
+<!--                        <input class="input-field" name="name" id="name1" />-->
+<!---->
+<!--                        <label>*Your Email:</label>-->
+<!--                        <input class="input-field" name="email" id="email1" />-->
+<!---->
+<!--                        <label>Subject:</label>-->
+<!--                        <input class="input-field" name="subject" id="subject" />-->
+<!---->
+<!--                        <label>Your message:</label>-->
+<!--                        <textarea class="textarea-field" name="message" id="message1" cols="80" rows="5"></textarea>-->
+<!---->
+<!--                        <br/>-->
+<!--                        <input type="submit" name="" class="submit" value="Send Email" />-->
+<!--                        <input type="reset" name="" class="reset" value="Clear form" />-->
+<!--                    </div>-->
+<!--                </form>-->
+
+
+                <?php $form = ActiveForm::begin(['id' => 'contact-form', 'class' => 'yiiActiveForm']); ?>
                     <div class="book-table-form">
                         <label>*Your name:</label>
                         <input class="input-field" name="name" id="name1" />
@@ -54,10 +75,10 @@ $this->title = 'Contact';
                         <textarea class="textarea-field" name="message" id="message1" cols="80" rows="5"></textarea>
 
                         <br/>
-                        <input type="submit" name="" class="submit" value="Send Email" />
+                        <input type="submit" name="ok" class="submit" value="Send Email" />
                         <input type="reset" name="" class="reset" value="Clear form" />
                     </div>
-                </form>
+                <?php ActiveForm::end(); ?>
 
                 <div class="google-map">
                     <h3>Find us on Google Maps</h3>
