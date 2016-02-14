@@ -46,7 +46,7 @@ AppAsset::register($this);
         <div class="wrapper">
 
             <div class="logo">
-                <a href="index.html"><img src="/public/images/logo.png" width="376" height="53" alt="" /></a>
+                <a href="/"><img src="/public/images/logo.png" width="376" height="53" alt="" /></a>
             </div><!--end logo-->
 
             <div class="menu">
