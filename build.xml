@@ -1,0 +1,16 @@
+<project name="make_project" basedir="." default="build">
+    <property name="yii" value="yii" override="false"/>
+    <target name="build">
+        <echo>... Update project ...</echo>
+        <echo>Runing git pull ...</echo>
+        <exec checkreturn="false" command="git pull" outputProperty="list"/>
+        <echo msg="${list}"/>
+        <echo>Running migrations ...</echo>
+        <exec checkreturn="false" command="php ${yii} migrate" outputProperty="list"/>
+        <echo msg="${list}"/>
+        <echo>Remove cache ...</echo>
+        <exec checkreturn="false" command="rm -R ${project.basedir}/runtime/cache/*" outputProperty="list"/>
+        <echo>Congratulations!</echo>
+        <echo>Project successfully updated.</echo>
+    </target>
+</project>
