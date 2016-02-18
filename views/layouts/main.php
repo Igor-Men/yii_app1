@@ -9,7 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use yii\helpers\Url;
-
+var_dump(Yii::$app->user->identity['username']);
 AppAsset::register($this);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -67,6 +67,16 @@ AppAsset::register($this);
                     <li><a href="#">Events</a></li>
                     <li><a href="<?= \yii\helpers\Url::to(['site/blog']); ?>">Blog</a></li>
                     <li><a href="<?= Url::to(['/site/contact']) ?>">Contact</a></li>
+                    <li><a href="<?= Url::to(['/site/reg']) ?>">регистрация</a></li>
+
+                    <?php
+                    if(Yii::$app->user->isGuest){
+                        echo '<li><a href="'. Url::to(['/site/login']).'">login</a></li>';
+                    } else {
+                        echo '<li><a href="'. Url::to(['/site/logout']).'" data-method="post">Выйти</a></li>';
+                    }
+                    ?>
+
 
                 </ul>
             </div><!--end menu-->

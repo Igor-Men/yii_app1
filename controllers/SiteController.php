@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\RegForm;
 use app\modules\admin\models\Contact;
 use app\modules\admin\models\Blog;
 use Yii;
@@ -73,9 +74,9 @@ class SiteController extends Controller
 
     public function actionLogin()
     {
-        if (!\Yii::$app->user->isGuest) {
+        /*if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
-        }
+        }*/
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
@@ -126,6 +127,26 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
+    public function actionReg() {
+        $model = new RegForm();
+        if($model->load(Yii::$app->request->post()) && $model->validate()){
+            if ($model->reg()):
+                return $this->goHome();
+            else:
+                Yii::$app->session->setFlash('error', 'Возникла ошибка при регистрации');
+                Yii::$app->error('Ошибка при регитсрации');
+                return $this->refresh();
+            endif;
+        }
+
+        return $this->render(
+            'reg',
+            [
+                'model' => $model
+            ]
+        );
+    }
+
     public function actionBlog()
     {
         $query = Blog::find();
@@ -137,8 +158,6 @@ class SiteController extends Controller
         $blogs = $query->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
-
-
 
         return $this->render('blog',[
             'blogs' => $blogs,
